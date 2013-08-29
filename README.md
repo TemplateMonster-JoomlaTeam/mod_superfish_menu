@@ -1,4 +1,4 @@
-mod_superfish_menu
-==================
+joomla__mod_superfish_menu
+==========================
 
-Superfish menu module for Joomla 3
+Joomla Superfish menu module
