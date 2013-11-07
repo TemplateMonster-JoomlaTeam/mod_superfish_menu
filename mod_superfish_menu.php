@@ -17,9 +17,9 @@ $document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfis
 $document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfish-navbar.css');
 $document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfish-vertical.css');
 
-$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/superfish.js');
+$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/superfish.min.js');
 $document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/jquery.mobilemenu.js');
-$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/jquery.hoverIntent.js');
+$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/hoverIntent.js');
 $document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/supersubs.js');
 $document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/sftouchscreen.js');
 
