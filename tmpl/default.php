@@ -27,7 +27,7 @@ switch ($layouttype) {
 }
 ?>
 <?php if(!$params->get('enableSelect')) : ?>
-<a class="btn btn-navbar btn-sf-menu" data-target=".sf-menu" data-toggle="collapse">
+<a class="btn btn-navbar btn-sf-menu">
 	<span class="fa fa-bars"></span>
 </a>
 <?php endif; ?> 
@@ -143,5 +143,8 @@ endforeach;
 		if(ismobile){
 			jQuery('.sf-menu').sftouchscreen({});
 		}
+		jQuery('.btn-sf-menu').click(function(){
+			jQuery('.sf-menu').toggleClass('in')
+		});
 	})
 </script>

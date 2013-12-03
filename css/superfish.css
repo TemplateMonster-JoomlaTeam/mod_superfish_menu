@@ -5,20 +5,20 @@
 	list-style: none;
 }
 .navigation{position: relative;}
-.sf-menu{
+.navigation .sf-menu{
     position: relative;
     overflow: visible;
     clear: both;
     height: auto !important;
 }
-    .sf-menu.in.collapse{
+  .navigation  .sf-menu.in{
       height: auto !important;
     }
-  .btn-sf-menu{
+  .navigation .btn-sf-menu{
     display: none;
     float: left;
   }
-  .select-menu{
+  .navigation .select-menu{
     width: 100%;
     display: none;
   }
@@ -59,6 +59,7 @@
   .navigation ul.sf-menu{
     overflow: hidden;
     height: 0 !important;
+    float: none;
   }
   .navigation ul.sf-menu>li{
     float: none;
