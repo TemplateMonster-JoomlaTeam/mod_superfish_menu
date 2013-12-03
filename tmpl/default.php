@@ -26,7 +26,11 @@ switch ($layouttype) {
 		break;
 }
 ?>
-
+<?php if(!$params->get('enableSelect')) : ?>
+<a class="btn btn-navbar btn-sf-menu" data-target=".sf-menu" data-toggle="collapse">
+	<span class="fa fa-bars"></span>
+</a>
+<?php endif; ?> 
 <ul class="sf-menu <?php echo $class_sfx;?> <?php echo $layout_class; ?>"<?php
 	$tag = '';
 	if ($params->get('tag_id')!=NULL) {
@@ -56,7 +60,7 @@ foreach ($list as $i => &$item) :
 	}
 
 	if ($item->deeper) {
-		$class .= ' deeper';
+		$class .= ' deeper dropdown';
 	}
 
 	if ($item->parent) {
@@ -84,7 +88,7 @@ foreach ($list as $i => &$item) :
 
 	// The next item is deeper.
 	if ($item->deeper) {
-		echo '<ul>';
+		echo '<ul class="sub-menu">';
 	}
 	// The next item is shallower.
 	elseif ($item->shallower) {
@@ -128,17 +132,13 @@ endforeach;
 	    onHide:        function(){},
 	    onIdle:        function(){}
 		});
-	});
-
-	jQuery(function(){
+		<?php if($params->get('enableSelect')) : ?>
 		jQuery('.sf-menu').mobileMenu({
 			defaultText: '<?php echo $params->get('defaultText'); ?>',
 			className: '<?php echo $params->get('className'); ?>',
 			subMenuClass: '<?php echo $params->get('subMenuClass'); ?>'
 		});
-	})
-
-	jQuery(function(){
+		<?php endif; ?> 
 		var ismobile = navigator.userAgent.match(/(iPhone)|(iPod)|(android)|(webOS)/i)
 		if(ismobile){
 			jQuery('.sf-menu').sftouchscreen({});

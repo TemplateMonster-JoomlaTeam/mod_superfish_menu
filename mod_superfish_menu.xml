@@ -4,14 +4,14 @@
 	version="3.0"
 	client="site"
 	method="upgrade">
-	<name>mod_superfish_menu</name>
+	<name>MOD_SUPERFISH_MENU</name>
 	<author></author>
 	<creationDate></creationDate>
 	<copyright></copyright>
 	<license></license>
 	<authorEmail></authorEmail>
 	<authorUrl></authorUrl>
-	<version>3.2.1</version>
+	<version>3.3.0</version>
 	<description>MOD_SUPERFISH_MENU_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_superfish_menu">mod_superfish_menu.php</filename>
@@ -76,6 +76,7 @@
 				<field
 					name="showAllChildren"
 					type="radio"
+					class="btn-group"
 					default="1"
 					label="MOD_MENU_FIELD_ALLCHILDREN_LABEL"
 					description="MOD_MENU_FIELD_ALLCHILDREN_DESC">
@@ -150,7 +151,7 @@
 				<field name="sf-speed" type="text" default="normal" label="SF_SPEED" description="SF_SPEED_DESCRIPTION"/>
 				<field name="sf-speed-out" type="text" default="fast" label="SF_SPEED_OUT" description="SF_SPEED_OUT_DESCRIPTION"/>
 
-				<field name="supersubs" type="list" default="0" label="SF_SUPERSUBS_LABEL" description="SF_SUPERSUBS_DESC">
+				<field name="supersubs" type="radio" class="btn-group" default="0" label="SF_SUPERSUBS_LABEL" description="SF_SUPERSUBS_DESC">
 						<option value="0">JNO</option>
 						<option value="1">JYES</option>
 				</field>
@@ -161,7 +162,7 @@
 						<option value="nav">SF_NAVBAR</option>
 				</field>
 
-				<field name="useClick" type="list" default="0" label="SF_USECLICK_LABEL" description="SF_USECLICK_DESC">
+				<field name="useClick" type="radio" class="btn-group" default="0" label="SF_USECLICK_LABEL" description="SF_USECLICK_DESC">
 						<option value="0">JNO</option>
 						<option value="1">JYES</option>
 				</field>
@@ -202,6 +203,11 @@
 				</field>
 				
 				<field type="spacer" label="SF_MOBILE_SETTINGS_LABEL"></field>
+
+				<field name="enableSelect" type="radio" class="btn-group" default="0" label="SF_SELECT_LABEL" description="SF_SELECT_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
 				
 				<field
 					type="text"

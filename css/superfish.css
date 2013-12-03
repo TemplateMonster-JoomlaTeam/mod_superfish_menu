@@ -4,6 +4,24 @@
 	padding: 0;
 	list-style: none;
 }
+.navigation{position: relative;}
+.sf-menu{
+    position: relative;
+    overflow: visible;
+    clear: both;
+    height: auto !important;
+}
+    .sf-menu.in.collapse{
+      height: auto !important;
+    }
+  .btn-sf-menu{
+    display: none;
+    float: left;
+  }
+  .select-menu{
+    width: 100%;
+    display: none;
+  }
 .sf-menu li {
 	position: relative;
 }
@@ -29,4 +47,27 @@
 .sf-menu ul ul {
 	top: 0;
 	left: 100%;
+}
+@media (max-width: 767px){
+  /*navigation*/
+  .navigation .btn-navbar{
+      display: block;
+  }
+  .navigation .select-menu{
+    display: block;
+  }
+  .navigation ul.sf-menu{
+    overflow: hidden;
+    height: 0 !important;
+  }
+  .navigation ul.sf-menu>li{
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+  .navigation ul.sf-menu>li ul{
+    padding: 0 0 0 15px;
+    width: auto;
+    position: static;
+  }
 }
