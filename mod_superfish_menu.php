@@ -12,7 +12,8 @@ defined('_JEXEC') or die;
 // Include the syndicate functions only once
 require_once dirname(__FILE__).'/helper.php';
 
-$document =& JFactory::getDocument();
+$doc = JFactory::getDocument();
+$document =& $doc;
 $document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfish.css');
 $document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfish-navbar.css');
 $document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfish-vertical.css');
