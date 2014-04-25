@@ -27,14 +27,15 @@ $.fn.mobileMenu = function(options) {
 
 		// Create base menu
 		$('<select />',{
-			'class' : settings.className
+			'class' : settings.className,
+			'id' : 'menu-'+el.attr('id')
 		}).insertAfter( el );
 
 		// Create default option
 		$('<option />', {
 			"value"		: '#',
 			"text"		: settings.defaultText
-		}).appendTo( '.' + settings.className );
+		}).appendTo( '#menu-'+el.attr('id') );
 
 		// Create select option from menu
 		el.find('a, .separator').each(function(){
@@ -57,13 +58,13 @@ $.fn.mobileMenu = function(options) {
 				"value"	: this.href,
 				"html"	: optText,
 				"selected" : (this.href == window.location.href)
-			}).appendTo( '.' + settings.className );
+			}).appendTo( '#menu-'+el.attr('id') );
 
 			} else {
 				$('<option />', {
 				"value"	: '#',
 				"html"	: optText
-			}).appendTo( '.' + settings.className );
+			}).appendTo( '#menu-'+el.attr('id') );
 			}
 
 		}); // End el.find('a').each

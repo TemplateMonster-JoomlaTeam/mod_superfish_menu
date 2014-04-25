@@ -1,5 +1,6 @@
 /* adding sf-vertical class in addition to sf-menu creates a vertical menu */
 /* eg. <ul class="sf-menu sf-vertical"> ... */
+
 .sf-vertical {
   width: 12em;
   /* If you want the width of the closed menu to expand to its
@@ -11,18 +12,22 @@
   *width: 12em;
   */
 }
+
 .sf-vertical ul {
 	left:	100%;
 	top: 0;
 }
+
 .sf-vertical > li {
   float: none;
 }
+
 .sf-vertical li {
   width: 100%;
 }
 
 /*** alter arrow directions ***/
+
 .sf-vertical.sf-arrows > li > .sf-with-ul:after {
   margin-top: -5px;
   margin-right: -3px;
@@ -30,6 +35,7 @@
   border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
   border-left-color: rgba(255,255,255,.5);
 }
+
 .sf-vertical.sf-arrows li > .sf-with-ul:focus:after,
 .sf-vertical.sf-arrows li:hover > .sf-with-ul:after,
 .sf-vertical.sf-arrows .sfHover > .sf-with-ul:after {

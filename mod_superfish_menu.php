@@ -14,15 +14,15 @@ require_once dirname(__FILE__).'/helper.php';
 
 $doc = JFactory::getDocument();
 $document =& $doc;
-$document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfish.css');
-$document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfish-navbar.css');
-$document->addStyleSheet(JURI::base() . 'modules/mod_superfish_menu/css/superfish-vertical.css');
+$document->addStyleSheet('modules/mod_superfish_menu/css/superfish.css');
+$document->addStyleSheet('modules/mod_superfish_menu/css/superfish-navbar.css');
+$document->addStyleSheet('modules/mod_superfish_menu/css/superfish-vertical.css');
 
-$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/superfish.min.js');
-$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/jquery.mobilemenu.js');
-$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/hoverIntent.js');
-$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/supersubs.js');
-$document->addScript(JURI::base() . 'modules/mod_superfish_menu/js/sftouchscreen.js');
+$document->addScript('modules/mod_superfish_menu/js/superfish.min.js');
+$document->addScript('modules/mod_superfish_menu/js/jquery.mobilemenu.js');
+$document->addScript('modules/mod_superfish_menu/js/hoverIntent.js');
+$document->addScript('modules/mod_superfish_menu/js/supersubs.js');
+$document->addScript('modules/mod_superfish_menu/js/sftouchscreen.js');
 
 $list	= modSfMenuHelper::getList($params);
 $app	= JFactory::getApplication();

@@ -31,14 +31,7 @@ switch ($layouttype) {
 	<span class="fa fa-bars"></span>
 </a>
 <?php endif; ?> 
-<ul class="sf-menu <?php echo $class_sfx;?> <?php echo $layout_class; ?>"<?php
-	$tag = '';
-	if ($params->get('tag_id')!=NULL) {
-		$tag = $params->get('tag_id').'';
-		echo ' id="'.$tag.'"';
-	}
-?>>
-
+<ul class="sf-menu <?php echo $class_sfx;?> <?php echo $layout_class; ?>" id="module-<?php echo $module->id; ?>">
 <?php
 foreach ($list as $i => &$item) :
 	$class = 'item-'.$item->id;
@@ -88,24 +81,30 @@ foreach ($list as $i => &$item) :
 
 	// The next item is deeper.
 	if ($item->deeper) {
-		echo '<ul class="sub-menu">';
+		echo '
+		<ul class="sub-menu">
+		';
 	}
 	// The next item is shallower.
 	elseif ($item->shallower) {
-		echo '</li>';
-		echo str_repeat('</ul></li>', $item->level_diff);
+		echo '</li>
+		';
+		echo str_repeat('</ul>
+			</li>
+			', $item->level_diff);
 	}
 	// The next item is on the same level.
 	else {
-		echo '</li>';
+		echo '</li>
+		';
 	}
 endforeach;
 ?></ul>
 
-<script type="text/javascript">
+<script>
 	// initialise plugins
 	jQuery(function(){
-		jQuery('ul.sf-menu')
+		jQuery('#module-<?php echo $module->id; ?>')
 			<?php if($params->get('supersubs')): ?> 
 				.supersubs({
 					minWidth:    12,   // minimum width of sub-menus in em units
@@ -131,20 +130,20 @@ endforeach;
 	    onShow:        function(){},
 	    onHide:        function(){},
 	    onIdle:        function(){}
-		});
+		})
 		<?php if($params->get('enableSelect')) : ?>
-		jQuery('.sf-menu').mobileMenu({
-			defaultText: '<?php echo $params->get('defaultText'); ?>',
-			className: '<?php echo $params->get('className'); ?>',
-			subMenuClass: '<?php echo $params->get('subMenuClass'); ?>'
+		.mobileMenu({
+			defaultText: "<?php echo $params->get('defaultText'); ?>",
+			className: "<?php echo $params->get('className'); ?>",
+			subMenuClass: "<?php echo $params->get('subMenuClass'); ?>"
 		});
 		<?php endif; ?> 
 		var ismobile = navigator.userAgent.match(/(iPhone)|(iPod)|(android)|(webOS)/i)
 		if(ismobile){
-			jQuery('.sf-menu').sftouchscreen({});
+			jQuery('#module-<?php echo $module->id; ?>').sftouchscreen({});
 		}
 		jQuery('.btn-sf-menu').click(function(){
-			jQuery('.sf-menu').toggleClass('in')
+			jQuery('#module-<?php echo $module->id; ?>').toggleClass('in')
 		});
 	})
 </script>

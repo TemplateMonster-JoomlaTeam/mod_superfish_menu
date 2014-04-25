@@ -4,14 +4,14 @@
 	version="3.0"
 	client="site"
 	method="upgrade">
-	<name>MOD_SUPERFISH_MENU</name>
+	<name>mod_superfish_menu</name>
 	<author></author>
 	<creationDate></creationDate>
 	<copyright></copyright>
 	<license></license>
 	<authorEmail></authorEmail>
 	<authorUrl></authorUrl>
-	<version>3.3.0</version>
+	<version>3.3.4</version>
 	<description>MOD_SUPERFISH_MENU_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_superfish_menu">mod_superfish_menu.php</filename>
@@ -152,8 +152,8 @@
 				<field name="sf-speed-out" type="text" default="fast" label="SF_SPEED_OUT" description="SF_SPEED_OUT_DESCRIPTION"/>
 
 				<field name="supersubs" type="radio" class="btn-group" default="0" label="SF_SUPERSUBS_LABEL" description="SF_SUPERSUBS_DESC">
-						<option value="0">JNO</option>
-						<option value="1">JYES</option>
+						<option value="0">JDISABLED</option>
+						<option value="1">JENABLED</option>
 				</field>
 
 				<field name="layouttype" type="list" default="hor" label="SF_LAYOUT_LABEL" description="SF_LAYOUT_DESC">
@@ -163,8 +163,8 @@
 				</field>
 
 				<field name="useClick" type="radio" class="btn-group" default="0" label="SF_USECLICK_LABEL" description="SF_USECLICK_DESC">
-						<option value="0">JNO</option>
-						<option value="1">JYES</option>
+						<option value="0">JDISABLED</option>
+						<option value="1">JENABLED</option>
 				</field>
 
 				<field name="easing" type="list" default="swing" label="SF_EASING">
@@ -205,8 +205,8 @@
 				<field type="spacer" label="SF_MOBILE_SETTINGS_LABEL"></field>
 
 				<field name="enableSelect" type="radio" class="btn-group" default="0" label="SF_SELECT_LABEL" description="SF_SELECT_DESC">
-						<option value="0">JNO</option>
-						<option value="1">JYES</option>
+						<option value="0">JDISABLED</option>
+						<option value="1">JENABLED</option>
 				</field>
 				
 				<field
@@ -231,6 +231,16 @@
 					default="sub-menu"
 					label="SF_SUBMENUCLASS"
 					>				
+				</field>
+
+				<field name="enableSticky" type="radio" class="btn-group" default="1" label="SF_STICKY_LABEL" description="SF_STICKY_DESC">
+						<option value="0">JDISABLED</option>
+						<option value="1">JENABLED</option>
+				</field>
+
+				<field name="enableStickyMobile" type="radio" class="btn-group" default="0" label="SF_STICKY_MOBILE_LABEL" description="SF_STICKY_MOBILE_DESC">
+						<option value="0">JDISABLED</option>
+						<option value="1">JENABLED</option>
 				</field>
 				
 			</fieldset>
